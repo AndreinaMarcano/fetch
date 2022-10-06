@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Desafió 1 Convertidor de divisa Simple."
+    />
+    <meta name="keywords" content="Divisas, Pesos Chilenos a Dólares /> <meta
+    property="og:title" content="Convertidor de Divisas Simple />
+    <meta
+      property="og:description"
+      content="Convertidor de pesos chilenos a dólares"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Desafió 1</title>
+  </head>
+  <body>
+    <header>
+      <div class="wrapper">
+        <div class="logo">Casa de Cambio</div>
+
+        <nav>
+          <a href="#">Inicio</a>
+          <a href="#">Servicios</a>
+          <a href="#">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <h1 id="Container">Convertor de Divisas</h1>
+  
+
+    <section id="section">
+      <form action="Formulario" id="Formulario" method="post"></form>
+      <h2>Cantidad:</h2>
+      <input
+        type="range"
+        id="cantidad"
+        min="0"
+        max="60"
+        value="0"
+        onchange="convertir()"
+      />
+      <span id="valor">0</span>
+      <h3>Convertir de:</h3>
+      <select id="de" onchange="convertir()">
+        <option value="1">peso Chileno</option>
+        <option value="2">peso argentino</option>
+        <option value="3">peso mexicano</option>
+      </select>
+      <h3>Convertir A:</h3>
+      <select id="a" onchange="convertir()">
+        <option value="1">peso chileno</option>
+        <option value="2">peso argentino</option>
+        <option value="3">peso mexicano</option>
+      </select>
+      <h1 id="resultado">Resultado:$0</h1>
+    </section>
+    <main>
+      <form id="form-initial">
+        <input type="text" id="name" placeholder="ingresa nombre" />
+        <input type="text" id="email" placeholder="email" />
+        <input type="number" id="rut" placeholder="rut" />
+        <input type="submit" id ="ingresar" value="INGRESAR" />
+      </form>
+    </main>
+   <div id="Monedas"></div>
+  
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="index.js"></script>
+ 
+  </body>
+</html>
