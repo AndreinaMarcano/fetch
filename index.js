@@ -1,11 +1,11 @@
 Swal.fire({
-  title: 'Hola',
-  text: 'Bienvenido al Convertido de Divisa.',
-  imageUrl: '../multimedia/imagen/moneda.png',
+  title: "Hola",
+  text: "Bienvenido al Convertido de Divisa.",
+  imageUrl: "../multimedia/imagen/moneda.png",
   imageWidth: 400,
   imageHeight: 200,
-  imageAlt: 'Custom image',
-})
+  imageAlt: "Custom image",
+});
 
 function convertir() {
   let valor = parseFloat(document.getElementById("cantidad").value);
@@ -49,42 +49,26 @@ function convertir() {
     "Resultado: $" + valor.toFixed(1);
 }
 
- document.getElementById("form-initial").addEventListener("submit", (event) => {
- event.preventDefault();
- console.log(event.target.children)
+document.getElementById("form-initial").addEventListener("submit", (event) => {
+  event.preventDefault();
+  console.log(event.target.children);
 
-for (const input of event.target.children) {
-  console.log(input);
-   const obj = {};
-  obj["tipo"] = input.name;
-  obj["valor"] = input.value;
-  // console.log(obj)
- localStorage.setItem(obj.tipo, obj.valor);
-  localStorage.setItem(obj.tipo, JSON.stringify(obj.valor));
-}
- });
-
- $(document).ready(function(){
-
-	$(window).scroll(function(){
-		if( $(this).scrollTop() > 0 ){
-			$('header').addClass('header2');
-		} else {
-			$('header').removeClass('header2');
-		}
-	});
-
+  for (const input of event.target.children) {
+    console.log(input);
+    const obj = {};
+    obj["tipo"] = input.name;
+    obj["valor"] = input.value;
+    // console.log(obj)
+    localStorage.setItem(obj.tipo, obj.valor);
+    localStorage.setItem(obj.tipo, JSON.stringify(obj.valor));
+  }
 });
 
 
- fetch("monedas.json")
- .then((res)=>res.json())
- .then((monedas)=>{
-  console.log(monedas)
-  monedas.forEach((divisas)=>{
-    const li = document.createElement("li")
-    li.innerHTML=
-    <h1>${moneda.nombre}</h1>
-    moneda.append(li)
-  })
- })
+
+fetch("monedas.json")
+  .then((res) => res.json())
+  .then((monedas) => {
+    console.log(monedas);
+    
+  });
